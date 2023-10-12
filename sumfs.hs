@@ -8,4 +8,4 @@ sumfs :: (Int -> Int) -> Int -> Int -> Int
 sumfs f x y = f x + f y
 
 square :: Int -> Int
-square \n -> n * n        --ここがラムダ式だから、sumfsで関数として使える
+square = \n -> n * n        --ここがラムダ式だから、sumfsで関数として使える
