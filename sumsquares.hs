@@ -15,6 +15,6 @@ sumsquares x y = sq x + sq y
 -- という書き方でも良い（letを用いた書き方）
 
 
--- 部分適用を用いる書き方
+-- 部分適用（多引数関数のはじめの一部に引数だけを与えたような関数適用）を用いる書き方
 -- sumsquares :: Int -> Int -> Int
 -- sumsquares = sumfs square 
