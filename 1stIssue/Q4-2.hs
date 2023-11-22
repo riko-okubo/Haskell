@@ -12,6 +12,6 @@ zs z k = [z^l | l <- [0..k]]
 as :: Int -> Int -> Int -> Int -> [Int] 
 as k x y z = nub $ sort [x * y * z | x <- xs x k, y <- ys y k, z <- zs z k]
 
-takeXiyjzk :: Int -> Int -> Int -> Int -> [Int]
-takeXiyjzk k x y z = take k $ as k x y z
-
+-- 正の整数k1, k2を引数として、k1以上k2以下のasのリストを返す関数を定義してください。
+betweenXiYjZk :: Int -> Int -> Int -> Int -> Int -> [Int]
+betweenXiYjZk k1 k2 x y z = takeWhile (<= k2) $ dropWhile (< k1) $ as k2 x y z
