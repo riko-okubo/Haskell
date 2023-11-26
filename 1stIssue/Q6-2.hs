@@ -1,4 +1,5 @@
-data BETree a = Empty | BELeaf a |BENode a (BETree a) (BETree a) deriving Show
+data BETree a = Empty | BELeaf a |BENode a (BETree a) (BETree a)
+    deriving (Show, Eq)
 -- 保持する値がa型であるような木をtとする
 -- 以下の関数を定義せよ
 
