@@ -11,7 +11,8 @@
 -- cataBTree f g (BNode x l r) = g x (cataBTree f g l) (cataBTree f g r)
 
 -- BETree a型の木を受け取り、それに対する「自然な再帰」を行う汎用的な高階関数cataBETreeを定義せよ
-data BETree a = Empty | BELeaf a | BENode a (BETree a) (BETree a) deriving Show
+data BETree a = Empty | BELeaf a |BENode a (BETree a) (BETree a)
+    deriving (Show, Eq)
 cataBETree :: (Ord a, Num a) => (BETree a -> b) -> (a -> b -> b -> b) -> BETree a -> b
 cataBETree f g Empty = f Empty
 cataBETree f g (BELeaf x) = f (BELeaf x)
